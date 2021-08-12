@@ -22,6 +22,7 @@ const CartItem = styled.div`
         & img {
             transform:scale(1.05);
         }
+        cursor : pointer;
     }
 `
 
