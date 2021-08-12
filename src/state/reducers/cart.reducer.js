@@ -19,7 +19,7 @@ const removeFromCart = (state,itemId)=>{
     let targetItem = state.items.filter((item)=>item.id===itemId);
     targetItem = targetItem[0];
 
-    let items = state.items.filter((item)=>itemId!=item.id);
+    let items = state.items.filter((item)=>itemId!==item.id);
     let total = state.total - targetItem.price;
     return {...state,...{items,total}};
 }

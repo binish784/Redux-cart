@@ -11,18 +11,16 @@ const ItemsList = ({items}) =>{
         dispatch(addToCart(item));
     }
 
-    return <div>
-        <ItemWrapper>
-            {items.map((item,index)=>{
-                return <ItemCard key={item.name+index}>
-                    <ItemTitle>{item.name}</ItemTitle>
-                    <ItemImage fluid src= {item.image}></ItemImage>
-                    <ItemPrice>{item.price} {item.unit}</ItemPrice>
-                    <AddToCart onClick={(e)=>handleItemAdd(item)}>Add To Cart</AddToCart>
-                </ItemCard>
-            })}
-        </ItemWrapper>
-    </div>
+    return <ItemWrapper>
+        {items.map((item,index)=>{
+            return <ItemCard key={item.name+index}>
+                <ItemTitle>{item.name}</ItemTitle>
+                <ItemImage fluid src= {item.image}></ItemImage>
+                <ItemPrice>{item.price} {item.unit}</ItemPrice>
+                <AddToCart onClick={(e)=>handleItemAdd(item)}>Add To Cart</AddToCart>
+            </ItemCard>
+        })}
+    </ItemWrapper>
 }
 
 export default ItemsList;
