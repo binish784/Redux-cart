@@ -13,6 +13,7 @@ const ItemCard = styled.div`
             bottom: 20px;
             opacity : 1;
         }
+        cursor:pointer;
     }
 `
 
